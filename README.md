@@ -20,6 +20,13 @@ Copy the `Sources/Classes` folder into your 4D project.
 
 ### Simple Toggle Machine
 
+```mermaid
+stateDiagram-v2
+    [*] --> inactive
+    inactive --> active: TOGGLE
+    active --> inactive: TOGGLE
+```
+
 ```4d
 var $machine : cs.state.StateMachine:=cs.state.State.me.createMachine({\
     id: "toggle"; \
@@ -40,6 +47,14 @@ ALERT($actor.value)  // "active"
 ```
 
 ### Counter with Context
+
+```mermaid
+stateDiagram-v2
+    [*] --> active
+    active --> active: INCREMENT\n(count+1)
+    active --> active: DECREMENT\n(count-1)
+    active --> active: RESET\n(count=0)
+```
 
 ```4d
 var $machine : cs.state.StateMachine:=cs.state.State.me.createMachine({\
@@ -73,6 +88,14 @@ ALERT(String($actor.context.count))  // 2
 
 ### Traffic Light with Transitions
 
+```mermaid
+stateDiagram-v2
+    [*] --> green
+    green --> yellow: TIMER
+    yellow --> red: TIMER
+    red --> green: TIMER
+```
+
 ```4d
 var $machine : cs.state.StateMachine:=cs.state.State.me.createMachine({\
     id: "trafficLight"; \
@@ -93,6 +116,16 @@ $actor.send("TIMER")  // red -> green
 ```
 
 ### Form Validation with Guards
+
+```mermaid
+stateDiagram-v2
+    [*] --> editing
+    editing --> editing: UPDATE_EMAIL
+    editing --> submitting: SUBMIT [email valid]
+    submitting --> success: SUCCESS
+    submitting --> editing: ERROR
+    success --> [*]
+```
 
 ```4d
 var $machine : cs.state.StateMachine:=cs.state.State.me.createMachine({\
@@ -120,6 +153,19 @@ var $machine : cs.state.StateMachine:=cs.state.State.me.createMachine({\
 ```
 
 ### Nested/Hierarchical States
+
+```mermaid
+stateDiagram-v2
+    [*] --> stopped
+    stopped --> playing: PLAY
+    playing --> stopped: STOP
+    
+    state playing {
+        [*] --> normal
+        normal --> fastForward: FAST_FORWARD
+        fastForward --> normal: NORMAL
+    }
+```
 
 ```4d
 var $machine : cs.state.StateMachine:=cs.state.State.me.createMachine({\
@@ -156,6 +202,22 @@ $subscription.unsubscribe()
 ```
 
 ### Entry and Exit Actions
+
+```mermaid
+stateDiagram-v2
+    [*] --> closed
+    closed --> open: OPEN
+    open --> closed: CLOSE
+    
+    note right of closed
+        entry: log("Door closed")
+        exit: log("Door opening...")
+    end note
+    
+    note right of open
+        entry: log("Door is now open")
+    end note
+```
 
 ```4d
 var $machine : cs.state.StateMachine:=cs.state.State.me.createMachine({\
@@ -266,7 +328,7 @@ Each state can have:
 
 ## Examples
 
-See the `Sources/Methods/` folder for complete examples:
+See the [`Sources/Methods/`](Project/Sources/Methods/) folder for complete examples:
 
 - `Example_Toggle.4dm` - Simple two-state toggle
 - `Example_Counter.4dm` - Counter with context
