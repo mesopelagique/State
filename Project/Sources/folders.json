@@ -1,0 +1,31 @@
+{
+	"(Default Classes)": {},
+	"(Default Folder)": {
+		"groups": [
+			"(Default Classes)",
+			"(Default Forms)",
+			"(Default Project Methods)",
+			"(Default Tables)"
+		]
+	},
+	"(Default Forms)": {},
+	"(Default Project Methods)": {},
+	"(Default Tables)": {},
+	"Example": {
+		"methods": [
+			"Example_Counter",
+			"Example_EntryExitActions",
+			"Example_FetchPattern",
+			"Example_FormValidation",
+			"Example_NestedStates",
+			"Example_Subscription",
+			"Example_Toggle",
+			"Example_TrafficLight"
+		]
+	},
+	"trash": {
+		"groups": [
+			"(Default Folder)"
+		]
+	}
+}
