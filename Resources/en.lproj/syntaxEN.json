@@ -1,0 +1,1108 @@
+{
+	"_method_": {},
+	"cs.state": {
+		"Guards": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"Actions": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"State": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"StateNode": {
+			"new()": {
+				"Syntax": "**.new**( *config* : Object; *options* : Object )",
+				"Params": [
+					[
+						"config",
+						"Object",
+						"->"
+					],
+					[
+						"options",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"MachineSnapshot": {
+			"new()": {
+				"Syntax": "**.new**( *config* : Object )",
+				"Params": [
+					[
+						"config",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"Actor": {
+			"new()": {
+				"Syntax": "**.new**( *machine* : cs.state.StateMachine; *options* : Object )",
+				"Params": [
+					[
+						"machine",
+						"cs.state.StateMachine",
+						"->"
+					],
+					[
+						"options",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"StateMachine": {
+			"new()": {
+				"Syntax": "**.new**( *config* : Object; *implementations* : Object )",
+				"Params": [
+					[
+						"config",
+						"Object",
+						"->"
+					],
+					[
+						"implementations",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		}
+	},
+	"Guards": {
+		"stateIn()": {
+			"Syntax": "**.stateIn**( *stateValue* : Variant ) : Object",
+			"Params": [
+				[
+					"stateValue",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"not()": {
+			"Syntax": "**.not**( *guardToNegate* : Variant ) : Object",
+			"Params": [
+				[
+					"guardToNegate",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"ref()": {
+			"Syntax": "**.ref**( *guardName* : Text; *params* : Object ) : Object",
+			"Params": [
+				[
+					"guardName",
+					"Text",
+					"->"
+				],
+				[
+					"params",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"or()": {
+			"Syntax": "**.or**( *guards* : Collection ) : Object",
+			"Params": [
+				[
+					"guards",
+					"Collection",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"and()": {
+			"Syntax": "**.and**( *guards* : Collection ) : Object",
+			"Params": [
+				[
+					"guards",
+					"Collection",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		}
+	},
+	"Actions": {
+		"cancel()": {
+			"Syntax": "**.cancel**( *id* : Text ) : Object",
+			"Params": [
+				[
+					"id",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"stop()": {
+			"Syntax": "**.stop**( *actorRef* : Variant ) : Object",
+			"Params": [
+				[
+					"actorRef",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"ref()": {
+			"Syntax": "**.ref**( *actionName* : Text; *params* : Object ) : Object",
+			"Params": [
+				[
+					"actionName",
+					"Text",
+					"->"
+				],
+				[
+					"params",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"sendParent()": {
+			"Syntax": "**.sendParent**( *event* : Variant ) : Object",
+			"Params": [
+				[
+					"event",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"log()": {
+			"Syntax": "**.log**( *expr* : Variant ) : Object",
+			"Params": [
+				[
+					"expr",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"emit()": {
+			"Syntax": "**.emit**( *event* : Variant ) : Object",
+			"Params": [
+				[
+					"event",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"sendTo()": {
+			"Syntax": "**.sendTo**( *actorRef* : Variant; *event* : Variant ) : Object",
+			"Params": [
+				[
+					"actorRef",
+					"Variant",
+					"->"
+				],
+				[
+					"event",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"raise()": {
+			"Syntax": "**.raise**( *event* : Variant ) : Object",
+			"Params": [
+				[
+					"event",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"pure()": {
+			"Syntax": "**.pure**( *fn* : 4D.Function ) : Object",
+			"Params": [
+				[
+					"fn",
+					"4D.Function",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"assign()": {
+			"Syntax": "**.assign**( *assignment* : Object ) : Object",
+			"Params": [
+				[
+					"assignment",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		}
+	},
+	"State": {
+		"pathToStateValue()": {
+			"Syntax": "**.pathToStateValue**( *path* : Text ) : Variant",
+			"Params": [
+				[
+					"path",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Variant",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"matchesState()": {
+			"Syntax": "**.matchesState**( *currentState* : Variant; *stateToMatch* : Variant ) : Boolean",
+			"Params": [
+				[
+					"currentState",
+					"Variant",
+					"->"
+				],
+				[
+					"stateToMatch",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"interpret()": {
+			"Syntax": "**.interpret**( *machine* : cs.state.StateMachine; *options* : Object ) : cs.state.Actor",
+			"Params": [
+				[
+					"machine",
+					"cs.state.StateMachine",
+					"->"
+				],
+				[
+					"options",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"cs.state.Actor",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"createActor()": {
+			"Syntax": "**.createActor**( *machine* : cs.state.StateMachine; *options* : Object ) : cs.state.Actor",
+			"Params": [
+				[
+					"machine",
+					"cs.state.StateMachine",
+					"->"
+				],
+				[
+					"options",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"cs.state.Actor",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"createMachine()": {
+			"Syntax": "**.createMachine**( *config* : Object ) : cs.state.StateMachine",
+			"Params": [
+				[
+					"config",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"cs.state.StateMachine",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"version": {
+			"Syntax": "version : Text"
+		}
+	},
+	"StateNode": {
+		"get events()": {
+			"Syntax": "**.get events**() : Collection",
+			"Params": [
+				[
+					"",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"getStateNodes()": {
+			"Syntax": "**.getStateNodes**( *stateValue* : Variant ) : Collection",
+			"Params": [
+				[
+					"stateValue",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"getTransition()": {
+			"Syntax": "**.getTransition**( *event* : Object; *snapshot* : cs.state.MachineSnapshot ) : Object",
+			"Params": [
+				[
+					"event",
+					"Object",
+					"->"
+				],
+				[
+					"snapshot",
+					"cs.state.MachineSnapshot",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"get definition()": {
+			"Syntax": "**.get definition**() : Object",
+			"Params": [
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"toJSON()": {
+			"Syntax": "**.toJSON**() : Object",
+			"Params": [
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"always": {
+			"Syntax": "always : Collection"
+		},
+		"tags": {
+			"Syntax": "tags : Collection"
+		},
+		"output": {
+			"Syntax": "output : Variant"
+		},
+		"definition": {
+			"Syntax": "definition : Object"
+		},
+		"meta": {
+			"Syntax": "meta : Variant"
+		},
+		"entry": {
+			"Syntax": "entry : Collection"
+		},
+		"history": {
+			"Syntax": "history : Variant"
+		},
+		"events": {
+			"Syntax": "events : Collection"
+		},
+		"initial": {
+			"Syntax": "initial : Text"
+		},
+		"transitions": {
+			"Syntax": "transitions : Object"
+		},
+		"exit": {
+			"Syntax": "exit : Collection"
+		},
+		"order": {
+			"Syntax": "order : Integer"
+		},
+		"key": {
+			"Syntax": "key : Text"
+		},
+		"type": {
+			"Syntax": "type : Text"
+		},
+		"states": {
+			"Syntax": "states : Object"
+		},
+		"id": {
+			"Syntax": "id : Text"
+		},
+		"path": {
+			"Syntax": "path : Collection"
+		},
+		"description": {
+			"Syntax": "description : Text"
+		},
+		"machine": {
+			"Syntax": "machine : cs.state.StateMachine"
+		},
+		"parent": {
+			"Syntax": "parent : cs.state.StateNode"
+		},
+		"config": {
+			"Syntax": "config : Object"
+		}
+	},
+	"MachineSnapshot": {
+		"clone()": {
+			"Syntax": "**.clone**( *overrides* : Object ) : cs.state.MachineSnapshot",
+			"Params": [
+				[
+					"overrides",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"cs.state.MachineSnapshot",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"toJSON()": {
+			"Syntax": "**.toJSON**() : Object",
+			"Params": [
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"toStrings()": {
+			"Syntax": "**.toStrings**() : Collection",
+			"Params": [
+				[
+					"",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"get meta()": {
+			"Syntax": "**.get meta**() : Object",
+			"Params": [
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"matches()": {
+			"Syntax": "**.matches**( *stateValue* : Variant ) : Boolean",
+			"Params": [
+				[
+					"stateValue",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"get nextEvents()": {
+			"Syntax": "**.get nextEvents**() : Collection",
+			"Params": [
+				[
+					"",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"can()": {
+			"Syntax": "**.can**( *event* : Variant ) : Boolean",
+			"Params": [
+				[
+					"event",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"get done()": {
+			"Syntax": "**.get done**() : Boolean",
+			"Params": [
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"hasTag()": {
+			"Syntax": "**.hasTag**( *tag* : Text ) : Boolean",
+			"Params": [
+				[
+					"tag",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"get hasError()": {
+			"Syntax": "**.get hasError**() : Boolean",
+			"Params": [
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"error": {
+			"Syntax": "error : Variant"
+		},
+		"tags": {
+			"Syntax": "tags : Collection"
+		},
+		"children": {
+			"Syntax": "children : Object"
+		},
+		"output": {
+			"Syntax": "output : Variant"
+		},
+		"status": {
+			"Syntax": "status : Text"
+		},
+		"machine": {
+			"Syntax": "machine : cs.state.StateMachine"
+		},
+		"context": {
+			"Syntax": "context : Object"
+		},
+		"historyValue": {
+			"Syntax": "historyValue : Variant"
+		},
+		"value": {
+			"Syntax": "value : Variant"
+		}
+	},
+	"Actor": {
+		"toJSON()": {
+			"Syntax": "**.toJSON**() : Object",
+			"Params": [
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"getPersistedSnapshot()": {
+			"Syntax": "**.getPersistedSnapshot**() : Object",
+			"Params": [
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"matches()": {
+			"Syntax": "**.matches**( *stateValue* : Variant ) : Boolean",
+			"Params": [
+				[
+					"stateValue",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"toPromise()": {
+			"Syntax": "**.toPromise**() : Object",
+			"Params": [
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"emit()": {
+			"Syntax": "**.emit**( *event* : Object )",
+			"Params": [
+				[
+					"event",
+					"Object",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"get snapshot()": {
+			"Syntax": "**.get snapshot**() : cs.state.MachineSnapshot",
+			"Params": [
+				[
+					"",
+					"cs.state.MachineSnapshot",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"on()": {
+			"Syntax": "**.on**( *eventType* : Text; *handler* : 4D.Function ) : Object",
+			"Params": [
+				[
+					"eventType",
+					"Text",
+					"->"
+				],
+				[
+					"handler",
+					"4D.Function",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"subscribe()": {
+			"Syntax": "**.subscribe**( *observerOrCallback* : Variant ) : Object",
+			"Params": [
+				[
+					"observerOrCallback",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"send()": {
+			"Syntax": "**.send**( *event* : Variant ) : cs.state.Actor",
+			"Params": [
+				[
+					"event",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"cs.state.Actor",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"getSnapshot()": {
+			"Syntax": "**.getSnapshot**() : cs.state.MachineSnapshot",
+			"Params": [
+				[
+					"",
+					"cs.state.MachineSnapshot",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"stop()": {
+			"Syntax": "**.stop**() : cs.state.Actor",
+			"Params": [
+				[
+					"",
+					"cs.state.Actor",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"get value()": {
+			"Syntax": "**.get value**() : Variant",
+			"Params": [
+				[
+					"",
+					"Variant",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"get context()": {
+			"Syntax": "**.get context**() : Object",
+			"Params": [
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"get state()": {
+			"Syntax": "**.get state**() : cs.state.MachineSnapshot",
+			"Params": [
+				[
+					"",
+					"cs.state.MachineSnapshot",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"start()": {
+			"Syntax": "**.start**() : cs.state.Actor",
+			"Params": [
+				[
+					"",
+					"cs.state.Actor",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"get status()": {
+			"Syntax": "**.get status**() : Text",
+			"Params": [
+				[
+					"",
+					"Text",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"sessionId": {
+			"Syntax": "sessionId : Text"
+		},
+		"systemId": {
+			"Syntax": "systemId : Text"
+		},
+		"machine": {
+			"Syntax": "machine : cs.state.StateMachine"
+		},
+		"logic": {
+			"Syntax": "logic : cs.state.StateMachine"
+		},
+		"id": {
+			"Syntax": "id : Text"
+		}
+	},
+	"StateMachine": {
+		"transition()": {
+			"Syntax": "**.transition**( *snapshot* : cs.state.MachineSnapshot; *event* : Object ) : cs.state.MachineSnapshot",
+			"Params": [
+				[
+					"snapshot",
+					"cs.state.MachineSnapshot",
+					"->"
+				],
+				[
+					"event",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"cs.state.MachineSnapshot",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"getInitialSnapshot()": {
+			"Syntax": "**.getInitialSnapshot**( *input* : Variant ) : cs.state.MachineSnapshot",
+			"Params": [
+				[
+					"input",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"cs.state.MachineSnapshot",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"resolveStateValue()": {
+			"Syntax": "**.resolveStateValue**( *stateValue* : Variant ) : Variant",
+			"Params": [
+				[
+					"stateValue",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Variant",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"getStateNodeById()": {
+			"Syntax": "**.getStateNodeById**( *stateId* : Text ) : cs.state.StateNode",
+			"Params": [
+				[
+					"stateId",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"cs.state.StateNode",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"getStateNodes()": {
+			"Syntax": "**.getStateNodes**( *stateValue* : Variant ) : Collection",
+			"Params": [
+				[
+					"stateValue",
+					"Variant",
+					"->"
+				],
+				[
+					"",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"toJSON()": {
+			"Syntax": "**.toJSON**() : Object",
+			"Params": [
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"provide()": {
+			"Syntax": "**.provide**( *implementations* : Object ) : cs.state.StateMachine",
+			"Params": [
+				[
+					"implementations",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"cs.state.StateMachine",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"states": {
+			"Syntax": "states : Object"
+		},
+		"initialContext": {
+			"Syntax": "initialContext : Variant"
+		},
+		"events": {
+			"Syntax": "events : Collection"
+		},
+		"id": {
+			"Syntax": "id : Text"
+		},
+		"config": {
+			"Syntax": "config : Object"
+		},
+		"root": {
+			"Syntax": "root : cs.state.StateNode"
+		},
+		"initial": {
+			"Syntax": "initial : Text"
+		},
+		"idMap": {
+			"Syntax": "idMap : Object"
+		},
+		"implementations": {
+			"Syntax": "implementations : Object"
+		},
+		"version": {
+			"Syntax": "version : Variant"
+		}
+	}
+}
